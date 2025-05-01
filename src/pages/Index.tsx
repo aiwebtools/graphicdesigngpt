@@ -15,15 +15,15 @@ const Index = () => {
     // Set page title and meta description
     document.title = "Graphic & Cover Design GPT | AI-Powered Design Assistant";
     
-    // Update meta image if it exists - use the uploaded image
+    // Update meta image if it exists - use the Facebook image URL
     const metaImage = document.querySelector('meta[property="og:image"]');
     if (metaImage) {
-      metaImage.setAttribute('content', window.location.origin + '/lovable-uploads/06e647cd-b3ab-455d-8de1-46fdd0ab4280.png');
+      metaImage.setAttribute('content', "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/494088313_10102939192851087_3198659876618467469_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A1yIXETJ_rUQ7kNvwHmRyXl&_nc_oc=AdkSPGOIfg2om-YYO-eS9yuV64sOyehQ0vWA9Qbnrr7FO6OjGSOFgRkM3ueBWnpYtQAezUoXkHjEuLhfw6GCfDOu&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=_wJiASGBYCyeDMIvl7m6WA&oh=00_AfEDo5fNtKd1ICTCn_Z0my2UsKQSFXsZ2harV5W_FvlrQw&oe=6818B341");
     }
     
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (twitterImage) {
-      twitterImage.setAttribute('content', window.location.origin + '/lovable-uploads/06e647cd-b3ab-455d-8de1-46fdd0ab4280.png');
+      twitterImage.setAttribute('content', "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/494088313_10102939192851087_3198659876618467469_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A1yIXETJ_rUQ7kNvwHmRyXl&_nc_oc=AdkSPGOIfg2om-YYO-eS9yuV64sOyehQ0vWA9Qbnrr7FO6OjGSOFgRkM3ueBWnpYtQAezUoXkHjEuLhfw6GCfDOu&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=_wJiASGBYCyeDMIvl7m6WA&oh=00_AfEDo5fNtKd1ICTCn_Z0my2UsKQSFXsZ2harV5W_FvlrQw&oe=6818B341");
     }
   }, []);
 
