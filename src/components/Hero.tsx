@@ -57,28 +57,11 @@ const Hero = () => {
           
           <div className="hidden lg:block">
             <div className="relative p-2 rounded-lg neon-border animate-float">
-              <div className="aspect-[4/3] bg-gradient-to-br from-cyber-dark to-black rounded shadow-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="p-6 text-center">
-                    <h3 className="text-2xl font-bold text-gradient mb-4">Professional Designs</h3>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-cyber-purple/20 p-4 rounded-md">
-                        <p className="text-white font-semibold">Book Covers</p>
-                      </div>
-                      <div className="bg-cyber-blue/20 p-4 rounded-md">
-                        <p className="text-white font-semibold">Album Art</p>
-                      </div>
-                      <div className="bg-cyber-pink/20 p-4 rounded-md">
-                        <p className="text-white font-semibold">Marketing</p>
-                      </div>
-                      <div className="bg-cyber-neon/20 p-4 rounded-md">
-                        <p className="text-white font-semibold">Social Media</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/graphic-design-sample.png" 
+                alt="Graphic & Cover Design GPT Example" 
+                className="w-full h-auto rounded-lg shadow-2xl shadow-cyber-purple/20"
+              />
             </div>
           </div>
         </div>

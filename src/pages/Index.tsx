@@ -12,8 +12,19 @@ import ConsentPopup from "../components/ConsentPopup";
 
 const Index = () => {
   useEffect(() => {
-    // Set page title
+    // Set page title and meta description
     document.title = "Graphic & Cover Design GPT | AI-Powered Design Assistant";
+    
+    // Update meta image if it exists
+    const metaImage = document.querySelector('meta[property="og:image"]');
+    if (metaImage) {
+      metaImage.setAttribute('content', window.location.origin + '/graphic-design-sample.png');
+    }
+    
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute('content', window.location.origin + '/graphic-design-sample.png');
+    }
   }, []);
 
   return (
