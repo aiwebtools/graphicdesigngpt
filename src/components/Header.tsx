@@ -61,6 +61,14 @@ const Header = () => {
               Ad & Logo Maker GPT
             </a>
             <a
+              href="https://productphotographygpt.lovable.app/?via=aiwebtools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors"
+            >
+              Product Photography GPT
+            </a>
+            <a
               href="#faq"
               className="text-white hover:text-cyber-purple transition-colors"
             >
@@ -117,6 +125,15 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               Ad & Logo Maker GPT
+            </a>
+            <a
+              href="https://productphotographygpt.lovable.app/?via=aiwebtools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Product Photography GPT
             </a>
             <a
               href="#faq"
