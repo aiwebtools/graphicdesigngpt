@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,66 +27,70 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         <Logo />
 
-        {/* Mobile menu button */}
-        <div className="lg:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white"
-          >
-            <Menu />
-          </Button>
-        </div>
+        {/* Mobile hamburger menu button - only shown on mobile */}
+        {isMobile && (
+          <div className="flex">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white"
+            >
+              <Menu />
+            </Button>
+          </div>
+        )}
 
-        {/* Desktop navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
-          <a
-            href="https://chatgpt.com/g/g-6812c1c50ed48191b6b1647d7d52c62b-graphic-cover-design-gpt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-cyber-purple transition-colors"
-          >
-            USE Graphic & Cover Design GPT
-          </a>
-          <a
-            href="#faq"
-            className="text-white hover:text-cyber-purple transition-colors"
-          >
-            FAQ
-          </a>
-          <a
-            href="#disclaimer"
-            className="text-white hover:text-cyber-purple transition-colors"
-          >
-            Disclaimer
-          </a>
-          <a
-            href="https://www.aiwebtools.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-cyber-purple transition-colors"
-          >
-            More AI Tools
-          </a>
-          <Button
-            className="bg-gradient-to-r from-cyber-purple to-cyber-blue hover:opacity-90 transition-opacity"
-            asChild
-          >
+        {/* Desktop navigation - always visible on desktop */}
+        {!isMobile && (
+          <nav className="flex items-center gap-6">
             <a
               href="https://chatgpt.com/g/g-6812c1c50ed48191b6b1647d7d52c62b-graphic-cover-design-gpt"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors"
             >
-              Try It Now
+              USE Graphic & Cover Design GPT
             </a>
-          </Button>
-        </nav>
+            <a
+              href="#faq"
+              className="text-white hover:text-cyber-purple transition-colors"
+            >
+              FAQ
+            </a>
+            <a
+              href="#disclaimer"
+              className="text-white hover:text-cyber-purple transition-colors"
+            >
+              Disclaimer
+            </a>
+            <a
+              href="https://www.aiwebtools.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors"
+            >
+              More AI Tools
+            </a>
+            <Button
+              className="bg-gradient-to-r from-cyber-purple to-cyber-blue hover:opacity-90 transition-opacity"
+              asChild
+            >
+              <a
+                href="https://chatgpt.com/g/g-6812c1c50ed48191b6b1647d7d52c62b-graphic-cover-design-gpt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Try It Now
+              </a>
+            </Button>
+          </nav>
+        )}
       </div>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden glass-panel border-b border-white/10 py-4">
+      {/* Mobile menu - only shown when toggled on mobile */}
+      {isMobile && mobileMenuOpen && (
+        <div className="glass-panel border-b border-white/10 py-4">
           <nav className="container mx-auto flex flex-col gap-4 px-4">
             <a
               href="https://chatgpt.com/g/g-6812c1c50ed48191b6b1647d7d52c62b-graphic-cover-design-gpt"
