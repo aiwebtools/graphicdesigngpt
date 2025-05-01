@@ -53,6 +53,14 @@ const Header = () => {
               USE Graphic & Cover Design GPT
             </a>
             <a
+              href="https://adandlogomakergpt.lovable.app/?via=aiwebtools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors"
+            >
+              Ad & Logo Maker GPT
+            </a>
+            <a
               href="#faq"
               className="text-white hover:text-cyber-purple transition-colors"
             >
@@ -100,6 +108,15 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               USE Graphic & Cover Design GPT
+            </a>
+            <a
+              href="https://adandlogomakergpt.lovable.app/?via=aiwebtools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyber-purple transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Ad & Logo Maker GPT
             </a>
             <a
               href="#faq"

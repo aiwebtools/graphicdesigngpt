@@ -30,6 +30,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a
+                  href="https://adandlogomakergpt.lovable.app/?via=aiwebtools"
+                  className="hover:text-cyber-purple transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ad & Logo Maker GPT
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="hover:text-cyber-purple transition-colors">
                   FAQ
                 </a>
@@ -113,20 +123,37 @@ const Footer = () => {
             </a>
           </p>
 
-          {/* More AI Tools Button */}
-          <Button
-            className="rounded-full bg-gradient-to-r from-cyber-purple to-cyber-blue hover:opacity-90 transition-opacity"
-            asChild
-          >
-            <a
-              href="https://www.aiwebtools.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
+          <div className="flex flex-wrap gap-4 justify-center">
+            {/* Ad & Logo Maker GPT Button */}
+            <Button
+              className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 transition-opacity"
+              asChild
             >
-              More AI Tools <ArrowRight size={16} />
-            </a>
-          </Button>
+              <a
+                href="https://adandlogomakergpt.lovable.app/?via=aiwebtools"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                Ad & Logo Maker GPT <ArrowRight size={16} />
+              </a>
+            </Button>
+
+            {/* More AI Tools Button */}
+            <Button
+              className="rounded-full bg-gradient-to-r from-cyber-purple to-cyber-blue hover:opacity-90 transition-opacity"
+              asChild
+            >
+              <a
+                href="https://www.aiwebtools.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                More AI Tools <ArrowRight size={16} />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </footer>
