@@ -15,10 +15,10 @@ const SOCIAL_MEDIA_IMAGE = "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/4
 
 const Index = () => {
   useEffect(() => {
-    // Set page title - this should match the one in index.html
-    document.title = "Graphic & Cover Design GPT | AI-Powered Design Assistant";
+    // Set page title with SEO keywords
+    document.title = "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools";
     
-    // Update meta tags for social media sharing
+    // Update meta tags for SEO and social media sharing
     const updateMetaTag = (selector: string, attribute: string, value: string) => {
       const tag = document.querySelector(selector);
       if (tag) {
@@ -26,15 +26,40 @@ const Index = () => {
       }
     };
     
-    // Update OG image
+    // Enhanced meta description with keywords
+    updateMetaTag('meta[name="description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
+    
+    // Update OG tags with keywords
+    updateMetaTag('meta[property="og:title"]', 'content', "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools");
+    updateMetaTag('meta[property="og:description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
     updateMetaTag('meta[property="og:image"]', 'content', SOCIAL_MEDIA_IMAGE);
     
-    // Update Twitter image
+    // Update Twitter tags with keywords
+    updateMetaTag('meta[name="twitter:title"]', 'content', "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools");
+    updateMetaTag('meta[name="twitter:description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
     updateMetaTag('meta[name="twitter:image"]', 'content', SOCIAL_MEDIA_IMAGE);
     
-    // Ensure Twitter specific meta tags are present and populated
-    updateMetaTag('meta[name="twitter:title"]', 'content', "Graphic & Cover Design GPT | AI-Powered Design Assistant");
-    updateMetaTag('meta[name="twitter:description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant.");
+    // Add additional SEO meta tags
+    const addMetaTag = (name: string, content: string) => {
+      if (!document.querySelector(`meta[name="${name}"]`)) {
+        const meta = document.createElement('meta');
+        meta.name = name;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+    
+    addMetaTag('keywords', 'AI tools, free AI tools, AI web tools, graphic design AI, cover design AI, AI design assistant, book cover generator, AI graphic designer, professional design tools, marketing design AI, AIWEBTOOLS.AI, AI WEB TOOLS');
+    addMetaTag('robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+    addMetaTag('googlebot', 'index, follow');
+    
+    // Add canonical link
+    if (!document.querySelector('link[rel="canonical"]')) {
+      const canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = window.location.href;
+      document.head.appendChild(canonical);
+    }
   }, []);
 
   return (
