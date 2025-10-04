@@ -11,12 +11,12 @@ import Disclaimer from "../components/Disclaimer";
 import ConsentPopup from "../components/ConsentPopup";
 
 // Define the social media image URL as a constant
-const SOCIAL_MEDIA_IMAGE = "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/494088313_10102939192851087_3198659876618467469_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A1yIXETJ_rUQ7kNvwHmRyXl&_nc_oc=AdkSPGOIfg2om-YYO-eS9yuV64sOyehQ0vWA9Qbnrr7FO6OjGSOFgRkM3ueBWnpYtQAezUoXkHjEuLhfw6GCfDOu&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=_wJiASGBYCyeDMIvl7m6WA&oh=00_AfEDo5fNtKd1ICTCn_Z0my2UsKQSFXsZ2harV5W_FvlrQw&oe=6818B341";
+const SOCIAL_MEDIA_IMAGE = "https://graphiccoverdesigngpt.lovable.app/og-image.png";
 
 const Index = () => {
   useEffect(() => {
     // Set page title with SEO keywords
-    document.title = "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools";
+    document.title = "Graphic & Cover Design GPT - Create Professional AI-Powered Designs | Free Tool";
     
     // Update meta tags for SEO and social media sharing
     const updateMetaTag = (selector: string, attribute: string, value: string) => {
@@ -27,16 +27,16 @@ const Index = () => {
     };
     
     // Enhanced meta description with keywords
-    updateMetaTag('meta[name="description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
+    updateMetaTag('meta[name="description"]', 'content', "Graphic & Cover Design GPT: Create stunning custom front & back cover images and professional graphic designs instantly with AI. Free design tool for authors, marketers & businesses.");
     
     // Update OG tags with keywords
-    updateMetaTag('meta[property="og:title"]', 'content', "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools");
-    updateMetaTag('meta[property="og:description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
+    updateMetaTag('meta[property="og:title"]', 'content', "Graphic & Cover Design GPT - Create Professional AI-Powered Designs");
+    updateMetaTag('meta[property="og:description"]', 'content', "Create stunning custom front & back cover images and professional graphic designs instantly with AI. Free design tool for authors, marketers & businesses by AIWEBTOOLS.AI");
     updateMetaTag('meta[property="og:image"]', 'content', SOCIAL_MEDIA_IMAGE);
     
     // Update Twitter tags with keywords
-    updateMetaTag('meta[name="twitter:title"]', 'content', "Graphic & Cover Design GPT | AI-Powered Design Assistant | Free AI Tools");
-    updateMetaTag('meta[name="twitter:description"]', 'content', "Create professional custom front & back cover images and graphic designs with our AI-powered design assistant. Free AI tools for designers, authors, marketers, and businesses.");
+    updateMetaTag('meta[name="twitter:title"]', 'content', "Graphic & Cover Design GPT - Create Professional AI-Powered Designs");
+    updateMetaTag('meta[name="twitter:description"]', 'content', "Create stunning custom front & back cover images and professional graphic designs instantly with AI. Free design tool for authors, marketers & businesses by AIWEBTOOLS.AI");
     updateMetaTag('meta[name="twitter:image"]', 'content', SOCIAL_MEDIA_IMAGE);
     
     // Add additional SEO meta tags
