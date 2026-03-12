@@ -20,7 +20,7 @@ const Logo = ({ className, withName = true }: LogoProps) => {
             Graphic & Cover Design GPT
           </span>
           <span className="text-[10px] text-gray-400">
-            Presented by <a href="https://www.aiwebtools.ai" className="underline hover:text-cyber-blue transition-colors">AiWebTools.Ai</a>
+            Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="underline hover:text-cyber-blue transition-colors" target="_blank" rel="noopener noreferrer">AiWebTools.Ai</a>
           </span>
         </div>
       )}
