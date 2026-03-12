@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.aiwebtools.ai"
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools"
                   className="hover:text-cyber-purple transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,7 +124,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               className="hover:text-cyber-purple transition-colors"
               target="_blank" 
               rel="noopener noreferrer"
@@ -170,7 +170,7 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://www.aiwebtools.ai"
+                href="https://aiwebtools.lovable.app/?via=aiwebtools"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
